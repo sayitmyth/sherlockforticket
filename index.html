@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the Stylesheets / CDN's -->
+
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <title>Ꝉìʍìէҽժ Ɛժìէìօղ | ѕρєƈȶʀʊʍ</title>
+</head>
+
+<body>
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-black">
+        <div class="w-full shadow md:mt-0 sm:max-w-md xl:p-0">
+            <div id="password-box" class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl leading-tight tracking-tight md:text-2xl text-white">
+                    enter your details..
+                </h1>
+                <form class="space-y-4 md:space-y-6" onsubmit="return validateForm()">
+                    <div>
+                        <input type="text" name="name" id="name"
+                            class="border sm:text-sm block w-full p-3 bg-black placeholder-gray-400 text-white"
+                            placeholder="ʏᴏᴜʀ ɴᴀᴍᴇ ʜᴇʀᴇ" required style="border: 2px solid rgb(44, 61, 122);">
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="ᴘᴀꜱꜱᴡᴏʀᴅ"
+                            class="border sm:text-sm block w-full p-3 bg-black placeholder-gray-400 text-white"
+                            required="" style="border: 2px solid rgb(53, 68, 122);">
+                    </div>
+                    <button id="submit" value="submit"
+                        class="text-white font-medium text-sm px-5 py-2.5 mr-2 mb-2 bg-black hover:bg-blue-700"
+                        style="border: 2px solid rgb(54, 96, 250);">Submit >_</button>
+                </form>
+            </div>
+            <div id="hidden-content" class="p-8 space-y-6 md:space-y-8 sm:p-10 bg-accent text-white rounded-2xl" style="border: 2px solid rgb(109, 54, 148);">
+                <h1 class="text-2xl leading-tight tracking-tight md:text-3xl text-white">
+                    Welcome, <span id="hidden-name"></span>!
+                </h1>
+                <p class="text-white">Congratulations! Now You Have Discovered Something, share your experience and play the game..</p>
+                <!-- You can open the modal using ID.showModal() method -->
+                <button class="btn" onclick="my_modal_1.showModal()">Start Game</button>
+                <dialog id="my_modal_1" class="modal">
+                    <form method="dialog" class="modal-box w-11/12 max-w-7xl h-screen bg-black text-white" style="border: 2px solid red; border-radius: 20px;">
+                        <button class="btn btn-lg btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        <h3 class="text-2xl">Presenting you the infamous Pacman</h3>
+                        <p class="py-4">Score The highest Points To Break the record and win the rewards</p>
+                    </form>
+                </dialog>
+            </div>
+
+        </div>
+        <div id="custom-alert" class="custom-alert">
+            <div class="custom-alert-content">
+                <p id="custom-alert-message"></p>
+                <button id="custom-alert-close" class="custom-alert-close bg-black text-white mt-4"
+                    style="border: 2px solid white;">Close()</button>
+            </div>
+
+        </div>
+        <div id="overlay" class="overlay"></div>
+
+        <!-- The Javascript Area -->
+
+        <script src="apco.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
